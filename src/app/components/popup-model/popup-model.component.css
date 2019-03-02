@@ -1,0 +1,36 @@
+
+
+label{
+    display: block;
+}
+
+.main{
+    text-align: center;
+    position: relative;
+}
+
+/* .ng-invalid:not(form)  {
+    border: 1px solid #a94442; /* red */
+  
+.spanError{
+    color: red;
+}
+
+.header{
+    font-weight: bold;
+}
+
+  .close{
+  position: absolute;
+  right: 0;
+  }
+
+  .form-group{
+      margin: 0;
+      height: 100px;
+  }
+
+  .form-group label::before { 
+    content: "*";
+    color: red;
+}

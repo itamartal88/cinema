@@ -1,0 +1,25 @@
+
+
+.movieName{
+    color: red;
+    font-weight: bold;
+}
+
+.main{
+    position: relative;
+}
+
+.cancelBtn{
+    position: absolute;
+    margin-right: 10px;
+    left: 20%;
+}
+
+.confirmBtn{
+    position: absolute;
+    right: 20%;;
+}
+
+p{
+    margin-bottom: 40px;
+}

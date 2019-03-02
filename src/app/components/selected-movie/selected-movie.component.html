@@ -1,0 +1,26 @@
+<div class="main" [@openClose]="appService.isSelectedMovie ? 'open' : 'closed'">
+    <div class="subMain" *ngIf="appService.isSelectedMovie">
+        <div class="col-sm-2 col-xs-1 col-lg-2 leftDiv"></div>
+        <div class="col-sm-8 col-xs-10 col-lg-8 center">
+            <div class="col-sm-6 col-xs-10 col-lg-6">
+                <span (click)="openEditModel()" class="glyphicon glyphicon-pencil"></span>
+                <span (click)="openDeleteModel()" class="glyphicon glyphicon-trash"></span>
+                <p class="header">{{movie.Title | title:movie.Title | titlecase}}</p>
+                <p class="movieDetails">Genre: {{movie.Genre}}</p>
+                <p class="movieDetails">By: {{movie.Director}}</p>
+                <p class="movieDetails">Time: {{movie.Runtime}} Min'</p>
+                <div class="desc">
+                        <img class="irc_mi" src="{{appService.selectedGif}}" onload="typeof google==='object'" alt="Image result for gif" data-iml="1551517420254"/>
+                </div>
+                <canvas appStars> </canvas>
+
+            </div>
+            <div class="col-sm-6 col-xs-10 col-lg-6 imgDiv">
+                <img src="{{movie.Poster}}" onerror="this.src = './../assets/images/no-image.png';" />
+            </div>
+        </div>
+        <div class="col-sm-2 col-xs-1 col-lg-2 rightDiv">
+            <span class="close" (click)="closeSelectedDiv()">&times;</span>
+        </div>
+    </div>
+</div>

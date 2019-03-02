@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col-xs-8 col-sm-4 col-md-4 col-lg-4">
+      <h1>{{header}}</h1>
+    </div>
+
+    <div class="col-xs-4 col-sm-6 col-md-6 col-lg-6 searchInput">
+      <div class="form-group">
+        <input placeholder="search by name.." [(ngModel)]="searchText" (keyup)='searchMovie()' type="text"
+          class="form-control">
+      </div>
+    </div>
+
+    <img title="Add Movie" class="plusBtn" (click)="openAddModel()" src="./../../../assets/images/plus-btn.png" />
+
+  </div>
+
+</div>

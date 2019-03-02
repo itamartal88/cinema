@@ -1,0 +1,75 @@
+<div class="main">
+      <span class="close" (click)="closeDialog()" aria-hidden="true">&times;</span>
+  <p class="header"><u>
+    Movie Details
+  </u>
+  </p>
+  <form [formGroup]="movieForm">
+
+    <div class="form-group" [class.has-error]="title.invalid && (title.dirty || title.touched)">
+      <label> Name:</label>
+      <input type="text" formControlName="title" class="form-control">
+      <div>
+        
+      </div>
+      <div *ngIf="title.invalid && (title.dirty || title.touched)">
+          <span  class="spanError" *ngIf="!title.errors.validMovieNameEcxist">
+          Field Is Required
+        </span>
+        <span  class="spanError" *ngIf="title.errors.validMovieNameEcxist">
+          Movie Name Already Ecxist
+        </span>
+      </div>
+    </div>
+
+    <div class="form-group" [class.has-error]="year.invalid && (year.dirty || year.touched)">
+      <label> Year:</label>
+      <input type="text" formControlName="year" class="form-control">
+      <div *ngIf="year.invalid && (year.dirty || year.touched)">
+          <span  class="spanError" *ngIf="!year.errors.validYear">
+              Field Is Required
+            </span>
+        <span  class="spanError" *ngIf="year.errors.validYear">
+        Years Range (1900-2019)
+      </span>
+      </div>
+    </div>
+
+    <div class="form-group" [class.has-error]="runTime.invalid && (runTime.dirty || runTime.touched)">
+      <label> Run Time(min):</label>
+      <input type="text" formControlName="runTime" class="form-control">
+      <div *ngIf="runTime.errors && (runTime.dirty || runTime.touched)">
+          <span  class="spanError" *ngIf="!runTime.errors.validRunTime">
+              Field Is Required
+            </span>
+          <span  class="spanError" *ngIf="runTime.errors.validRunTime">
+          Insert Only Numbers Max(300)
+        </span>
+      </div>
+    </div>
+
+    <div class="form-group" [class.has-error]="genre.invalid && (genre.dirty || genre.touched)">
+      <label> Genre:</label>
+      <input type="text" formControlName="genre" class="form-control">
+      <div *ngIf="genre.invalid && (genre.dirty || genre.touched)">
+          <span  class="spanError">
+              Field Is Required
+          </span>
+      </div>
+    </div>
+       
+    <div class="form-group" [class.has-error]="director.invalid && (director.dirty || director.touched)">
+      <label> Director:</label>
+      <input type="text" formControlName="director" class="form-control">
+      <div *ngIf="director.invalid && (director.dirty || director.touched)">
+          <span  class="spanError">
+              Field Is Required
+            </span>
+      </div>
+    </div
+    >
+  </form>
+
+  <button class="btn btn-primary" *ngIf="addMode" (click)="addMovie()" [disabled]="!movieForm.valid">Add Movie</button>
+  <button class="btn btn-primary" *ngIf="editMode" (click)="editMovie()" [disabled]="!movieForm.valid">Edit Movie</button>
+</div>

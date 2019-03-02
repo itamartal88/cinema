@@ -1,0 +1,12 @@
+
+
+<div>
+  <app-top-bar></app-top-bar>
+</div>
+<div *ngIf='appService.noResult' class="comment">
+    <h1 align="center">{{noMovieComment}}</h1>
+</div>
+<app-selected-movie></app-selected-movie>
+<div class="movies">
+<app-movie></app-movie>
+</div>

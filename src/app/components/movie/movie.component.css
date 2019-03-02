@@ -1,0 +1,62 @@
+
+
+.outMovieDiv{
+    position:relative;
+    padding: 10px;
+}
+
+.inMovieDiv:hover{
+    /* background-color:#000; */
+    opacity:0.5;
+    border-radius: 5px;
+}
+
+.inMovieDiv:hover .glyphicon-info-sign{
+    opacity:1;
+}
+
+.editBtn{
+    position: absolute;
+    left: 0;
+}
+
+.deleteBtn{
+    position: absolute;
+    right: 0;
+}
+
+.inMovieDiv{
+    position: relative;
+    padding: 5px;
+    border-radius: 5px;
+    background: linear-gradient(to right, #f79d00, #64f38c);
+}
+
+img{
+    height: 400px;
+    width: 80%;
+    border-radius: 5px;
+}
+
+.glyphicon-info-sign{
+    opacity: 0; 
+    font-size: 200px;
+    color: red;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.glyphicon-info-sign:hover{
+    cursor: pointer;
+}
+
+.title{
+    font-weight: bold;
+}
+
+.year{
+    font-weight: bold;
+}
